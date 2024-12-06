@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DbMutabakatModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="HedefDepoOrhanlıDepo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AdresAdi" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="İl" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Tır" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Kırkayak" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Kamyon" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="DbMutabakatEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="HedefDepoOrhanlıDepo" EntityType="Self.HedefDepoOrhanlıDepo" />
+  </EntityContainer>
+</Schema>

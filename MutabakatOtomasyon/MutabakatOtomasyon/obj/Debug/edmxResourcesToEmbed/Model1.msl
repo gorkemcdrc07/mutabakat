@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DbMutabakatModelStoreContainer" CdmEntityContainer="DbMutabakatEntities">
+    <EntitySetMapping Name="HedefDepoOrhanlıDepo">
+      <EntityTypeMapping TypeName="DbMutabakatModel.HedefDepoOrhanlıDepo">
+        <MappingFragment StoreEntitySet="HedefDepoOrhanlıDepo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AdresAdi" ColumnName="AdresAdi" />
+          <ScalarProperty Name="İl" ColumnName="İl" />
+          <ScalarProperty Name="Tır" ColumnName="Tır" />
+          <ScalarProperty Name="Kırkayak" ColumnName="Kırkayak" />
+          <ScalarProperty Name="Kamyon" ColumnName="Kamyon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

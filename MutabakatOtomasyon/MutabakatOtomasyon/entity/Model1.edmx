@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DbMutabakatModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="HedefDepoOrhanlıDepo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AdresAdi" Type="nvarchar" MaxLength="500" />
+          <Property Name="Il" Type="nvarchar" MaxLength="500" />
+          <Property Name="ÇEKİCİ" Type="nvarchar" MaxLength="500" />
+          <Property Name="KIRKAYAK" Type="nvarchar" MaxLength="500" />
+          <Property Name="ONTEKER" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="SudesanFiyatListesi">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AdresAdi" Type="nvarchar" MaxLength="500" />
+          <Property Name="Il" Type="nvarchar" MaxLength="500" />
+          <Property Name="ONTEKER" Type="nvarchar" MaxLength="500" />
+          <Property Name="ÇEKİCİ" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="TblHedefEskiFiyatBilgileri">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tarih" Type="date" />
+          <Property Name="EskiFiyat" Type="nvarchar" MaxLength="500" />
+          <Property Name="YeniFiyat" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityContainer Name="DbMutabakatModelStoreContainer">
+          <EntitySet Name="HedefDepoOrhanlıDepo" EntityType="Self.HedefDepoOrhanlıDepo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SudesanFiyatListesi" EntityType="Self.SudesanFiyatListesi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblHedefEskiFiyatBilgileri" EntityType="Self.TblHedefEskiFiyatBilgileri" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DbMutabakatModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="HedefDepoOrhanlıDepo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdresAdi" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Il" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ÇEKİCİ" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="KIRKAYAK" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ONTEKER" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TblHedefEskiFiyatBilgileri">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tarih" Type="DateTime" Precision="0" />
+          <Property Name="EskiFiyat" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="YeniFiyat" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="DbMutabakatEntities3" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="HedefDepoOrhanlıDepo" EntityType="Self.HedefDepoOrhanlıDepo" />
+          <EntitySet Name="TblHedefEskiFiyatBilgileri" EntityType="Self.TblHedefEskiFiyatBilgileri" />
+          <EntitySet Name="SudesanFiyatListesi" EntityType="DbMutabakatModel.SudesanFiyatListesi" />
+        </EntityContainer>
+        <EntityType Name="SudesanFiyatListesi">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdresAdi" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Il" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ONTEKER" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ÇEKİCİ" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DbMutabakatModelStoreContainer" CdmEntityContainer="DbMutabakatEntities3">
+          <EntitySetMapping Name="HedefDepoOrhanlıDepo">
+            <EntityTypeMapping TypeName="DbMutabakatModel.HedefDepoOrhanlıDepo">
+              <MappingFragment StoreEntitySet="HedefDepoOrhanlıDepo">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="AdresAdi" ColumnName="AdresAdi" />
+                <ScalarProperty Name="Il" ColumnName="Il" />
+                <ScalarProperty Name="ÇEKİCİ" ColumnName="ÇEKİCİ" />
+                <ScalarProperty Name="KIRKAYAK" ColumnName="KIRKAYAK" />
+                <ScalarProperty Name="ONTEKER" ColumnName="ONTEKER" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblHedefEskiFiyatBilgileri">
+            <EntityTypeMapping TypeName="DbMutabakatModel.TblHedefEskiFiyatBilgileri">
+              <MappingFragment StoreEntitySet="TblHedefEskiFiyatBilgileri">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="EskiFiyat" ColumnName="EskiFiyat" />
+                <ScalarProperty Name="YeniFiyat" ColumnName="YeniFiyat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SudesanFiyatListesi">
+            <EntityTypeMapping TypeName="DbMutabakatModel.SudesanFiyatListesi">
+              <MappingFragment StoreEntitySet="SudesanFiyatListesi">
+                <ScalarProperty Name="ÇEKİCİ" ColumnName="ÇEKİCİ" />
+                <ScalarProperty Name="ONTEKER" ColumnName="ONTEKER" />
+                <ScalarProperty Name="Il" ColumnName="Il" />
+                <ScalarProperty Name="AdresAdi" ColumnName="AdresAdi" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
